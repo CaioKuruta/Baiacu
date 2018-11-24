@@ -1,0 +1,71 @@
+ 
+							           		
+
+Apagar (Testar o programa em qualquer distro do Linux
+
+
+* Nome dos Integrantes *
+
+3016103601  Caio Augusto de Oliveira
+3016103584  Vinícius Moreno de oliveira
+3016202024  Elvis Lopes Rodriguês de Souza
+3016101184  Lucas Gaiofatto
+414107213   Victor de Lima Ferreira
+3016102066  João Pedro)
+
+
+====================== Manual ======================
+
+O Baiacu e um Snnifer limitado a poucos argumentos que
+sao passadas junto a execucao do programa diretamente pela
+linha de comando do terminal
+
+Ex : Para Sniffar pacotes onde so queremos a saida em forma resumida
+e nao pretendemos fazer nenhuma outra filtragem a entrada seria
+
+./Baiacu.py -s
+
+Onde a saida seria em forma de sumario.
+
+Ex : Para realizar o sniff onde queremos filtrar somente os pacotes TCP que
+passam pela porta 80 e gostariamos de exibir esses pacotes de forma mais
+ completa a entrada seria
+
+./Baiacu.py -t -p 80 -S
+
+onde a saida seria uma apresentacao mais completa que o sumario
+
+
+
+---------------------------------------------------------------
+--------------- Flags e suas Funcoes --------------------------
+---------------------------------------------------------------
+
+(-a)  a filtragem do siniffer referece a protocolo ARP
+(-I)  a filtragem do siniffer referece a protocolo IP
+(-t)  a filtragem do siniffer referece a protocolo TCP
+(-u)  a filtragem do siniffer referece a protocolo UDP
+(-i)  a filtragem do siniffer referece a protocolo ICMP
+(-sO) ao passar esse parametro o programa ira capturar os pagotes sniffados
+e ira salvar em um arquivo .pcap durante a execucao do programa. Ao esse parametro
+a flag espera receber o nome do arquivo em terminante .pcap (EX:./Baiacu.py -s -sO Nome_do_Arquivo.pcap)
+(-s)  esse parametro define a saida do sniffing de pacotes em forma de sumario logo
+sao apresentados de forma mais resumida
+(-S)  esse parametro define a saida do sniffing de pacotes de forma mais completa
+apresentando toda a estrutura do pacote
+(-sP) esse parametro e focado no sniffing de logins e senhas e sua saida sera mostrada
+apenas apos a captura de alguma informacao relevanta para o parametro
+(-H)  esse parametro permite que o usuario especifique o endereco do host qual quer
+sniffar os pacotes ignorando interacoes que nao sejam desse endereco (Ex.: ./Baiacu.py -H 200.54.24.03)
+(-p)  parametro que permite especificar a porta que deseja sniffar ignorando o trafego de outras portas
+(-r)  a saida mostra os pacotes na sua forma crua sem nenhuma tratacao
+
+------------------------------------------------------------------------------------------------
+---------------------------------------Bugs Conhecidos------------------------------------------
+------------------------------------------------------------------------------------------------
+
+() Caso o programa seja iniciado sem nenhum parametro ele nao fara nada
+() Caso haja mais de um tratamento de saida o programa sempre trata o sumario(-s)
+() o Programa aceita entradas como -iiiiiiiiiiiiiiii (icmp)
+() Caso nenhuma forma de saida seja selecionada o programa ira rodar mas nao imprimira
+nada. (Porem caso a opcao de salvar seja selecionada o sniffing sera salvo normalmente)
