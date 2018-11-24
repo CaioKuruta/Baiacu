@@ -1,18 +1,3 @@
- 
-							           		
-
-Apagar (Testar o programa em qualquer distro do Linux
-
-
-* Nome dos Integrantes *
-
-3016103601  Caio Augusto de Oliveira
-3016103584  Vinícius Moreno de oliveira
-3016202024  Elvis Lopes Rodriguês de Souza
-3016101184  Lucas Gaiofatto
-414107213   Victor de Lima Ferreira
-3016102066  João Pedro)
-
 
 ====================== Manual ======================
 
