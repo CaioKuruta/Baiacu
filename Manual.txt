@@ -22,9 +22,9 @@ onde a saida seria uma apresentacao mais completa que o sumario
 
 
 
----------------------------------------------------------------
+--------------------------------------------------------------
 --------------- Flags e suas Funcoes --------------------------
----------------------------------------------------------------
+--------------------------------------------------------------
 
 (-a)  a filtragem do siniffer referece a protocolo ARP
 (-I)  a filtragem do siniffer referece a protocolo IP
