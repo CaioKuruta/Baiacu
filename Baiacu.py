@@ -27,6 +27,7 @@ parse = argparse.ArgumentParser(description="")
 
 
 parse.add_argument("-man","--man",help="Exibe o manual ",action="store_true")
+parse.add_argument("-hx","--hex",help="Mostra o pacote em hexadecimal" ",action="store_true")
 parse.add_argument("-a","--arp",help="Define o snnifing arp",action="store_true")
 parse.add_argument("-t","--tcp",help="Define o snnifing tcp",action="store_true")
 parse.add_argument("-u","--udp",help="Define o snnifing udp",action="store_true")
@@ -133,7 +134,15 @@ def print_pack(pack):
                     print(pack.show())
         except Scapy_Exception as erro:
             print ('Erro -----------------------------> ' ,erro)
+##########################################################################################################
+    elif args.hex:
+        try:                
+            print(hexdump(pack))       
+        except Scapy_Exception as erro:
+            print ('Erro -----------------------------> ' ,erro)
 ###############################SALVAR EM ARQUIVO########################################################################
+                   
+                   
     if args.saveo:
         n = str(args.saveo)
         wrpcap(n,pack,append=True)
