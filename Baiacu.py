@@ -26,7 +26,7 @@ type_sf = ""  # Parametro que sera inserido no ``filter``
 parse = argparse.ArgumentParser(description="")
 
 
-parse.add_argument("-sS","--sem",help="Snifar sem parametos",action="store_true")
+parse.add_argument("-man","--man",help="Exibe o manual ",action="store_true")
 parse.add_argument("-a","--arp",help="Define o snnifing arp",action="store_true")
 parse.add_argument("-t","--tcp",help="Define o snnifing tcp",action="store_true")
 parse.add_argument("-u","--udp",help="Define o snnifing udp",action="store_true")
@@ -41,6 +41,11 @@ parse.add_argument("-p","--port",help="Filtra a porta que deseja sniffar",action
 
 args = parse.parse_args()
 
+if args.man:
+    
+    arquivo = open("Manual.txt","r")
+    for linha in arquivo:
+        print (linha)
 
 
 
