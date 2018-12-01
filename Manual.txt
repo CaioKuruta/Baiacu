@@ -26,6 +26,9 @@ onde a saida seria uma apresentacao mais completa que o sumario
 --------------- Flags e suas Funcoes --------------------------
 --------------------------------------------------------------
 
+
+(-r) Exibe os pacotes filtrados de forma crua
+(-hx) Exibe os pacotes filtrados em hexadecial
 (-a)  a filtragem do siniffer referece a protocolo ARP
 (-I)  a filtragem do siniffer referece a protocolo IP
 (-t)  a filtragem do siniffer referece a protocolo TCP
